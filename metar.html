@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AxFL-METAR</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/metar.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="index.html">
+            <img src="assets/img/axfl__2_-removebg-preview.png" alt="Logo" style="width: 80px; height: auto;">
+        </a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="metar.html"><i class="fa-solid fa-cloud-showers-heavy"></i> Metar's</a></li>
+                <li><a href="charts.html"><i class="fa-solid fa-map"></i> Charts</a></li>
+                <li><a href="help.html"><i class="fa-solid fa-circle-question"></i> Help</a></li>
+                <li><a href="ofp.html"><i class="fa-solid fa-file-alt"></i> OFP</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section style="padding: 30px; text-align: center;">
+        <h2>Consultar METAR e TAF</h2>
+        <p>Digite o código ICAO do aeroporto:</p>
+
+    <input type="text" id="icaoInput" placeholder="Ex: SBGR" maxlength="4" />
+    <button id="botaoBuscar" onclick="buscarMetarTaf()">Buscar</button>
+
+        <!-- Dados em texto -->
+        <div id="resultado" style="margin-top: 20px;"></div>
+
+        <!-- Widget com bússola -->
+        <div id="metar-taf-container" style="margin-top: 40px; display: none;">
+            <h3>Informações gráficas:</h3>
+            <div id="metar-iframe" style="width: 300px; height: 435px; display:block; margin: auto;">
+                <!-- O widget será injetado aqui -->
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/script/metar.js"></script>
+</body>
+</html>

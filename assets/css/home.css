@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Styles */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 80px;
+    background: linear-gradient(45deg, #000000, #383333, #0e0d0d);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(214, 214, 214);
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #088178;
+    transform: scale(1.1) translateY(-2px); /* zoom + subida */
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#hero h4{
+    padding-bottom: 15px;
+}
+
+#hero h1{
+    color: #088178;
+}
+
+#hero {
+    height: 50vh;
+    width: 100%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url(../img/sbgr-aeroporto-internacional-de-guarulhos-46J1N.png);
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner h4{
+    color: #000000;
+    font-size: 36px;
+
+}
+
+#banner h2{
+    color: #000000;
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+#banner h2 span{
+    color: #ec3e3e;
+}
+
+#banner button {
+    background: #ff5151; 
+    color: #fff; 
+    border: none; 
+    padding: 12px 24px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+#banner button i {
+    margin-right: 8px;
+    font-size: 18px; 
+}
+
+#banner button:hover {
+    background: #7a0303; 
+    color: #fff; 
+    transform: scale(1.05); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+}
+
+#banner .button-group {
+    display: flex;
+    gap: 16px; /* Espaço entre os botões */
+    margin-top: 20px;
+    flex-wrap: wrap; /* Para que em telas pequenas eles se empilhem */
+    justify-content: center; /* Centraliza os botões */
+}
+
+#Donate {
+    background: #cfa737 !important;
+    color: #fff !important;
+}
+
+#Donate:hover {
+    background: #70580f !important;
+    color: #fff !important;
+}
+
+#como-funciona {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+#como-funciona .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#como-funciona h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+#como-funciona .steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#como-funciona .step {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#como-funciona .step i {
+    font-size: 40px;
+    color: #7a0303;
+    margin-bottom: 20px;
+}
+
+#como-funciona .step h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#como-funciona .step p {
+    font-size: 16px;
+    color: #666;
+}
+
+#como-funciona .step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+#banner h4 {
+    cursor: pointer;
+    color: #410000;
+    text-decoration: none;
+}
